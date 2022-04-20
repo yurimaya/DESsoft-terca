@@ -1,32 +1,8 @@
-/**
- 
- Exercício de fixação 1
- 
-Criar um programa para processar as seguintes informações de um aluno:
-matrícula, nome , nota1, nota2 e se ele está aprovado ou reprovado;
-
-Durante a execução calcular a nota final do aluno utilizando a seguinte
-regra: notaFinal = (nota1 + nota2) / 2. Se a nota final for igual ou superior a
-6 o aluno está aprovado, caso contrário estará reprovado;
-
-O programa deverá imprimir o seguinte relatório:
-
-Matrícula: xxxxx
-Nome: xxxxx xxxxx
-Aprovado: ( x ) Sim (
- */
-
 import java.util.Scanner;
 
-public class Programa { //Início do programa
-
-
-	public static void main(String[] args) { //Início do main
-		
-//		String matricula = "12345";
-//		String nome = "João Pedro";
-//		double nota1 = 7.2;
-//		double nota2 = 1;
+public class Programa {
+	
+	public static void main(String[] args) {
 		
 		Scanner leitor = new Scanner(System.in);
 		
@@ -42,28 +18,23 @@ public class Programa { //Início do programa
 		System.out.println("Digite a nota 2:");
 		double nota2 = leitor.nextDouble();
 		
-		double notaFinal = (nota1 + nota2) / 2;
+		double notafinal = (nota1 + nota2) / 2;
 		
-		System.out.println("Matrícula: " + matricula); //Concatenação
-		System.out.println("nome: " + nome);
+		System.out.println("Matrícula: " + matricula);
+		System.out.println("Nome: " + nome);
 		
-		//igual ou superior a 6
-		if (notaFinal >= 6) {
+		if (notafinal >= 6) {
 			
-			
-			System.out.println("Aprovado: (x) Sim ( ) Não");
-			
+			System.out.println("O aluno está aprovado!");
 			
 		} else {
 			
-			System.out.println("Aprovado: ( ) Sim (x) Não");
-			
+			System.out.println("O aluno está reprovado!");
 		}
 		
-		System.out.println("Nota final: " + notaFinal);
+		System.out.println("A nota final é: " + notafinal);
 		
 		leitor.close();
-	
-	} // Fim do main	
+	}
 
-} //Fim do programa
+}
